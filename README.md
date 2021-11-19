@@ -22,10 +22,12 @@
 1. **_Dev-1_**: Create a new branch, from the tip of your __*main*__ branch and call it `develop`
 1. **_Dev-1_**: Copy the entire [src/](./src) folder from this repo (without modifying it) to the root of your project, `commit` and `push`
 1. **_Dev-2_**: Verify that both of you have the latest code by pulling the `develop` branch. History should now look like this:
-![Baseline](./docs/baseline.png)
+
+  ![Baseline](./docs/baseline.png)
 
 1. **_Dev-1_** & **_Dev-2_**: Verify that you can view [src/index.html](./src/index.html) in your browser.
-![Hello World](./docs/hello-world.png)
+
+  ![Hello World](./docs/hello-world.png)
 
 ### Step 1.3 - create own branches
 1. **_Dev-1_** & **_Dev-2_**: From the tip of `develop` **create one branch each on your respective computers** (make sure to not give them the same name).
@@ -33,7 +35,8 @@
 E.g.
 $ git switch --create=my-cool-feature develop
 ```
-![History 1](./docs/history-1.png)
+
+  ![History 1](./docs/history-1.png)
 
 1. **_Dev-1_** & **_Dev-2_**: `Push` your newly created branches and update your local repos with `fetch`.
 ```
@@ -52,12 +55,18 @@ $ git fetch
   ![History 4](./docs/history-4.png)
 
 ### Step 1.5 - integrate changes (merge)
-1. **_Dev-1_**: Checkout **_Dev-2's_** branch so you have a local reference to the two branches.
-1. **_Dev-1_**: `Merge` the two branches together and resolve any potential conflicts
+1. **_Dev-1_**: Join the two branches together by `merging` Dev-2's remote branch into your local feature branch. Resolve any potential conflicts and make sure both of your changes are respected.
+```
+E.g.
+$ git merge origin/another-cool-feature
+```
+
 1. **_Dev-1_**: `Push` the merge commit to remote
 1. **_Dev-2_**: `Pull` the changes so both of you have it locally
 
-Congratulations, you have now completed the first part!
+  ![Final](./docs/final.png)
+
+Congratulations, you have now completed the first part of this assignment! 🎉
 
 ---
 
@@ -65,6 +74,25 @@ Congratulations, you have now completed the first part!
 With the recent `merge` process completed, let's redo the same integration using `rebase` instead!
 1. **_Dev-1_**: Create a new branch from the commit just before the merge, for example using:
 ```
-$ git switch -c cool-feature HEAD~1
+E.g.
+$ git switch -c my-cool-feature-2 my-cool-feature~1
 ```
-1. x
+
+1. **_Dev-1_**: Now integrate the change from Dev-2's branch using `rebase` instead of `merge`
+```
+E.g.
+$ git rebase origin/another-cool-feature
+```
+
+1. **_Dev-1_**: Resolve any potential conflicts and finish the rebase
+
+  ![Rebase](./docs/rebase.png)
+
+  Congratulations, you have now completed the second part of this assignment! 🎉
+
+---
+
+### Step 3 - compare the outcomes
+Compare the two outcomes from the `merge` and `rebase` process.
+- How do they differ?
+- What's the main difference between `merge` and `rebase`?
