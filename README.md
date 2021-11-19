@@ -11,27 +11,37 @@
 
 ## The assignment
 ### Step 1.1 - init repo
-1. Create a new repository and publish it on GitHub
-1. Invite your classmate as collaborator
-1. Make sure both of you have managed to clone the repo onto your respective computers
+1. **_Dev-1_**: Create a new repository locally on your computer and add an empty `.gitignore`, commit it to your *__main__* branch and provide a decent commit message
+1. **_Dev-1_**: Publish repo on GitHub
+1. **_Dev-1_**: Invite your classmate as collaborator
+1. **_Dev-2_**: Clone the repo
+1. Verify that both of you have the code on your respective computers. By viewing the history locally using `gitk` it should look something like this:
+![Init repo](./docs/init-repo.png)
 
 ### Step 1.2 - set baseline
-1. Create a new branch and call it `develop`
-1. Add the entire [src/](./src) folder (without modifying it) to the root of your project, `commit` and `push`
-1. Verify that both of you have the latest code by pulling the `develop` branch, and that you can view [src/index.html](./src/index.html) in your browser.
+1. **_Dev-1_**: Create a new branch, from the tip of your __*main*__ branch and call it `develop`
+1. **_Dev-1_**: Copy the entire [src/](./src) folder from this repo (without modifying it) to the root of your project, `commit` and `push`
+1. **_Dev-2_**: Verify that both of you have the latest code by pulling the `develop` branch. History should now look like this:
+![Baseline](./docs/baseline.png)
+
+1. **_Dev-1_** + **_Dev-2_**: Verify that you can view [src/index.html](./src/index.html) in your browser.
+![Hello World](./docs/hello-world.png)
 
 ### Step 1.3 - create own branches
-1. From the tip of `develop` **create one branch each on your respective computers** (make sure to not give them the same name).
+1. **_Dev-1_** + **_Dev-2_**: From the tip of `develop` **create one branch each on your respective computers** (make sure to not give them the same name).
 ```
 E.g.
 $ git switch --create=my-cool-feature develop
 ```
-1. `Push` your newly created branches and update your local repos with `fetch`.
+![History 1](./docs/history-1.png)
+
+1. **_Dev-1_** + **_Dev-2_**: `Push` your newly created branches and update your local repos with `fetch`.
 ```
 $ git push --set-upstream origin my-cool-feature
 $ git fetch
 ```
 1. Verify that you are able to see each others branches in your local repository (using for example `gitk`)
+![History 2](./docs/history-2.png)
 
 ### Step 1.4 - create divergent history
 1. **_Dev-1_**: Modify the text inside the `<p>` tag in [index.html](./index.html), e.g. change it from _"Hello World!"_ to _"Hello Earth!"_; `commit` the change to your local branch and then `push` it to remote.
