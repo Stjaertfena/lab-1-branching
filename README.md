@@ -1,4 +1,6 @@
 # Lab 1 - Branching & Merging
+![road](./docs/main.jpeg)
+Photo by [Joey Kyber](https://unsplash.com/@jtkyber1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/traffic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ## Purpose & Goal
 - Get comfortable working with branches
