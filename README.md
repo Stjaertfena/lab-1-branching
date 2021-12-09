@@ -118,6 +118,11 @@ With the recent `merge` process completed, let's redo the same integration using
 E.g.
 $ git switch -c my-cool-feature-2 my-cool-feature~1
 ```
+Above command creates and checks out a new branch called `my-cool-feature-2` from the commit that's "one commit" before the tip of `my-cool-feature` using the relative reference `~1`; for a thorough run through of absolut and relative refs see this [post](https://blog.git-init.com/relative-vs-absolute-references-in-git/).
+
+  ![Reset](./docs/reset-rebase.png)
+
+  History should now look like this, notice how `my-cool-feature-2` has been created from the original commit just before the merge.
 
 1. **_Dev-1_**: Now integrate the change from Dev-2's branch using `rebase` instead of `merge`
 ```
@@ -133,7 +138,6 @@ $ git rebase origin/another-cool-feature
 
 ### Step 5.0 - Compare the outcomes
 Compare the two outcomes from the `merge` and `rebase` process.
-- ❓ How do they differ?
 - ❓ What's the main difference between `merge` and `rebase`?
 
 Stil not completely sure? Check out my [post](https://betterprogramming.pub/differences-between-git-merge-and-rebase-and-why-you-should-care-ae41d96237b6) on the subject to get yet another visual explanation.
