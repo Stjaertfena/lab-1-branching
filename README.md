@@ -2,7 +2,7 @@
 ![road](./docs/main.jpeg)
 Photo by [Joey Kyber](https://unsplash.com/@jtkyber1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/traffic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Understanding how **_commits_** and **_branches_** interplay is crucial for any working with Git. In this assignment you'll practice jumping between branches and joining histories together using both `merge` and `rebase`. By completing this assignment you'll also get to practice conflict resolution – another common theme for anyone working on shared code bases.
+Understanding how **_commits_** and **_branches_** interplay is crucial for any one working with Git. In this assignment you'll practice jumping between branches and joining histories together using both `merge` and `rebase`. By completing this assignment you'll also get to practice conflict resolution – another common theme for anyone working on shared code bases.
 
 ## Purpose & Goal
 - Practice setting up repo and inviting collaborator
@@ -62,7 +62,7 @@ History should now look like this:
 
   ![Baseline](./docs/baseline.png)
 
-1. **_Dev-1_** & **_Dev-2_**: Verify that you can view [src/index.html](./src/index.html) in your browser.
+1. **_Dev-1_** & **_Dev-2_**: Verify that you can view the copied `src/index.html` in your browser.
 
   ![Hello World](./docs/hello-world.png)
 
@@ -76,6 +76,7 @@ $ git switch --create=my-cool-feature develop
 ```
 
   ![History 1](./docs/history-1.png)
+
   On each respective computer you should now see your newly created branch, pointing to the same commit as `develop`.
 
 1. **_Dev-1_** & **_Dev-2_**: `Push` your newly created branches and update your local repos with `fetch`.
@@ -86,11 +87,12 @@ $ git fetch
 1. Verify that you are able to see each others branches in your local repository (using for example `gitk`)
 
   ![History 2](./docs/history-2.png)
+
   With your own local branches in place, it's time to start modifying the source code.
 
 1. **_Dev-1_**: Modify the text inside the `<p>` tag in [index.html](./index.html), e.g. change it from _"Hello World!"_ to _"Hello Earth!"_; `commit` the change to your local branch and then `push` it to remote.
 1. **_Dev-2_**: Modify the same `<p>` tag (but on your own branch) by adding the following css class `class="green"` to it; `commit` the change to your local branch and then `push` it to remote.
-1. `Fetch` each others changes, your history should now resemble this (notice how the two branches have diverged):
+1. `Fetch` each others changes, your history should now resemble below source tree (notice how the two branches have diverged):
 
   ![History 4](./docs/history-4.png)
 
@@ -105,6 +107,7 @@ $ git merge origin/another-cool-feature
 1. **_Dev-2_**: `Pull` the changes so both of you have it locally
 
   ![Final](./docs/final.png)
+
   Your history and "website" should now look like this.
 
 ### Step 4.0 - Integrate each others changes with `rebase`
@@ -125,6 +128,7 @@ $ git rebase origin/another-cool-feature
 1. **_Dev-1_**: Resolve any potential conflicts and finish the rebase
 
   ![Rebase](./docs/rebase.png)
+
   By completing the process your "website" should look like after the `merge` from before, but your history should look slightly different.
 
 ### Step 5.0 - Compare the outcomes
