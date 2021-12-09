@@ -122,7 +122,7 @@ Above command creates and checks out a new branch called `my-cool-feature-2` fro
 
   ![Reset](./docs/reset-rebase.png)
 
-  History should now look like this, notice how `my-cool-feature-2` has been created from the original commit just before the merge.
+  History should now look like above, notice how `my-cool-feature-2` has been created from the original commit just before the merge.
 
 1. **_Dev-1_**: Now integrate the change from Dev-2's branch using `rebase` instead of `merge`
 ```
