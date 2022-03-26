@@ -5,7 +5,7 @@ Photo by [Joey Kyber](https://unsplash.com/@jtkyber1?utm_source=unsplash&utm_med
 Understanding how **_commits_** and **_branches_** interplay is crucial for any one working with Git. In this assignment you'll practice jumping between branches and joining histories together using both `merge` and `rebase`. By completing this assignment you'll also get to practice conflict resolution – another common theme for anyone working on shared code bases.
 
 ## Purpose & Goal
-- Practice setting up repo and inviting collaborator
+- Practice setting up a repo and inviting collaborators
 - Get comfortable working with branches
 - Understand how the two main options (`merge` vs `rebase`) for integrating changes between branches works, and how they differ
 - Understand how conflict resolution works
@@ -15,7 +15,7 @@ Understanding how **_commits_** and **_branches_** interplay is crucial for any 
 - For actions/operations performed on one computer – pair program!
 
 ## The assignment
-Your task is to setup a new repository locally, publish it on Github and then invite your teammate to collaborate. You'll then copy-paste some existing source code into your project, before making modifications to it on your respective machines – finally merging it all together.
+Your task is to setup a new repository locally, publish it on Github and then invite your teammate to collaborate. You'll then copy-paste some existing source code (from this repo) into your project, before making modifications to it on your respective machines – finally merging it all together.
 
 In short:
 - [ ] Setup a new repo, invite collaborator
@@ -35,7 +35,7 @@ $ git commit -m "Init repo"
 ```
 Above commands does the trick straight from the command line, but you can of course create a new file straight from your IDE or OS if you'd like.
 
-1. **_Dev-1_**: Create a new (empty) private repo on [Github](https://github.com/new) and publish your local repo to it by following the guide.
+1. **_Dev-1_**: Create a new (empty) private repo on [Github](https://github.com/new) and publish your local repo to it by following the guide Github prompts you with.
 ```
 git remote add origin git@github.com:......
 git push --set-upstream origin main
@@ -84,7 +84,7 @@ $ git switch --create=my-cool-feature develop
 $ git push --set-upstream origin my-cool-feature
 $ git fetch
 ```
-1. Verify that you are able to see each others branches in your local repository (using for example `gitk`)
+1. Verify that you are able to see each others branches in your local repository (using for example `$ gitk --all`, or `$ git branch --all`)
 
   ![History 2](./docs/history-2.png)
 
@@ -92,7 +92,7 @@ $ git fetch
 
 1. **_Dev-1_**: Modify the text inside the `<p>` tag in [index.html](./index.html), e.g. change it from _"Hello World!"_ to _"Hello Earth!"_; `commit` the change to your local branch and then `push` it to remote.
 1. **_Dev-2_**: Modify the same `<p>` tag (but on your own branch) by adding the following css class `class="green"` to it; `commit` the change to your local branch and then `push` it to remote.
-1. `Fetch` each others changes, your history should now resemble below source tree (notice how the two branches have diverged):
+1. `Fetch` each others changes, your history should now resemble below source tree (notice how the two branches have diverged from each other, with _develop_ as their common ancestor):
 
   ![History 4](./docs/history-4.png)
 
@@ -104,7 +104,7 @@ $ git merge origin/another-cool-feature
 ```
 
 1. **_Dev-1_**: `Push` the merge commit to remote
-1. **_Dev-2_**: `Pull` the changes so both of you have it locally
+1. **_Dev-2_**: `Fetch` the changes so both of you have them locally
 
   ![Final](./docs/final.png)
 
