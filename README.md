@@ -140,4 +140,4 @@ $ git rebase origin/another-cool-feature
 Compare the two outcomes from the `merge` and `rebase` process.
 - ❓ What's the main difference between `merge` and `rebase`?
 
-Stil not completely sure? Check out my [post](https://betterprogramming.pub/differences-between-git-merge-and-rebase-and-why-you-should-care-ae41d96237b6) on the subject to get yet another visual explanation.
+Stil not completely sure? Check out my [post](https://blog.git-init.com/differences-between-git-merge-and-rebase-and-why-you-should-care) on the subject to get yet another visual explanation.
